@@ -1,0 +1,35 @@
+{
+  "name": "fnb-official",
+  "version": "3.0.0",
+  "description": "The official website of ``\u001b`\u001b[2 Flesh`n`Blood based in Merseburg, Germany",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleshnblood/fleshnblood.github.io.git"
+  },
+  "keywords": [
+    "fleshnblood",
+    "punk",
+    "punkrock",
+    "metal",
+    "rock",
+    "n",
+    "roll",
+    "metallic",
+    "punk",
+    "n",
+    "roll"
+  ],
+  "author": "Canena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fleshnblood/fleshnblood.github.io/issues"
+  },
+  "homepage": "https://github.com/fleshnblood/fleshnblood.github.io#readme",
+  "devDependencies": {
+    "html-minifier": "^1.3.0"
+  }
+}
