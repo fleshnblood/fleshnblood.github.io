@@ -1065,21 +1065,27 @@ ul.horizontal > li {
     }
     
     // From http://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
-    function scrollTo(element, to, duration, next) {
+    function scrollTo(to, duration, next) {
         if (duration < 0) {
             next();
             return;
         }
-        var difference = to - element.scrollTop;
+        var difference = to - (document.documentElement.scrollTop || document.body.scrollTop);
         var perTick = difference / duration * 10;
 
         setTimeout(function() {
-            element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop === to) {
+            var top = (document.documentElement.scrollTop || document.body.scrollTop) + perTick; 
+            document.documentElement.scrollTop = top;
+            
+            if (document.body) {
+                document.body.scrollTop = top;
+            }
+            
+            if (top === to) {
                 next();
                 return;
             }
-            scrollTo(element, to, duration - 10, next);
+            scrollTo(to, duration - 10, next);
         }, 10);
     }
     
@@ -1096,7 +1102,6 @@ ul.horizontal > li {
                 //console.log(anchor.href, window.pageYOffset + top);
                 
                 scrollTo(
-                    document.body, 
                     window.pageYOffset + anchor.getBoundingClientRect().top, 
                     600,
                     function () {
