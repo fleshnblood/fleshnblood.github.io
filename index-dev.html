@@ -46,11 +46,15 @@ body {
 }
 
 table {
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: -6px;
+    margin-left: -6px;
 }
 table th,
 table td {
+    padding: 4px 6px;
     text-align: left;
+    vertical-align: top;
 }
 
 /*a[href^=http]:before {
@@ -78,13 +82,13 @@ table td {
     background: url('img/bg-h1.png') bottom center;
     color: #fff;
     font-family: 'Great Vibes', cursive;
-    font-size: 28px;
+    font-size: 38px;
     margin: 0;
-    padding: 20px 24px;
+    padding: 70px 24px 20px 24px;
 }
 .content h2 {
     /*font-family: 'Great Vibes', cursive;*/
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
 }
 /*.content h2 + ul,
@@ -92,12 +96,43 @@ table td {
     margin-top: 15px;
 }*/
 .content .card {
-    background: #fafafa url('img/bg-bone.jpg') bottom 10px right no-repeat;
+    background: #fafafa url('img/bg-bone.jpg') bottom right no-repeat;
     border-radius: 5px;
     box-shadow: 0 0 5px #333;
-    font-size: 14px;
-    margin: 15px 25px;
+    font-size: 16px;
+    margin: 15px 25px 30px 25px;
+    /*min-height: 200px;*/
     padding: 15px;
+}
+.content.music .card {
+    display: inline-block;
+    vertical-align: top;
+}
+.card.fischi {
+    min-height: 332px;
+}
+.content .card > img {
+    width: 100%;
+}
+.col1-of-2 .card {
+    margin-right: 15px;
+}
+.col2-of-2 .card {
+    margin-left: 15px;
+}
+.content .card ul {
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+.content .card ul.no-style {
+    padding-left: 0;
+}
+.content .card ul:last-child {
+    margin-bottom: 0;
+}
+.content .card li a {
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 .content .card > h2:first-child {
     /*background: #eee;
@@ -145,7 +180,8 @@ ul.horizontal > li {
 }
 
 .seam1:before {
-    background: url('img/bg-seam1.png') center repeat;
+    /*background: url('img/bg-seam1.png') center repeat;*/
+    background: url('img/bg-seam9.png') center repeat;
     content: " ";
     display: block;
     height: 400px;
@@ -153,10 +189,10 @@ ul.horizontal > li {
     width: 100%;
 }
 .seam1:after {
-    background: url('img/bg-content-end.png') center repeat;
+    background: url('img/bg-seam3.png') center repeat;
     content: " ";
     display: block;
-    height: 90px;
+    height: 400px;
     max-width: 960px;
     width: 100%;
 }
@@ -172,11 +208,59 @@ ul.horizontal > li {
     background: url('img/bg-content-end.png') center repeat;
     content: " ";
     display: block;
-    height: 90px;
+    height: 150px;
     max-width: 960px;
     width: 100%;
 }
-
+.seam3:before {
+    background: url('img/bg-seam4.png') center repeat;
+    content: " ";
+    display: block;
+    height: 400px;
+    max-width: 960px;
+    width: 100%;
+}
+.seam3:after {
+    background: url('img/bg-seam9.png') center repeat;
+    /*background: url('img/bg-seam3.png') center repeat;*/
+    content: " ";
+    display: block;
+    height: 400px;
+    max-width: 960px;
+    width: 100%;
+}
+.seam4:before {
+    background: url('img/bg-content.png') center repeat;
+    content: " ";
+    display: block;
+    height: 400px;
+    max-width: 960px;
+    width: 100%;
+}
+.seam4:after {
+    background: url('img/bg-seam6.png') center repeat;
+    content: " ";
+    display: block;
+    height: 400px;
+    max-width: 960px;
+    width: 100%;
+}
+.seam5:before {
+    background: url('img/bg-seam10.png') center repeat;
+    content: " ";
+    display: block;
+    height: 400px;
+    max-width: 960px;
+    width: 100%;
+}
+.seam5:after {
+    background: url('img/bg-seam8.png') center no-repeat;
+    content: " ";
+    display: block;
+    height: 800px;
+    max-width: 960px;
+    width: 100%;
+}
 .social-networks ul a {
     display: block;
 }
@@ -192,6 +276,28 @@ ul.horizontal > li {
 }
 .social-networks .lastfm {
     padding-top: 15px !important;
+}
+
+.gallery .cancelled-date {
+    text-decoration: line-through;
+}
+.gallery .card table {
+    margin-right: -40px;
+    width: 100%;
+}
+.gallery .card td ul {
+    background: url(img/transparent_darker.png);
+    border-radius: 5px;
+    list-style: none;
+    margin: -35px 0px -10px -10px;
+    padding: 35px 0px 10px 10px;
+    width: 100%;
+}
+.gallery .card td li {
+    display: inline-block;
+}
+.gallery .card td img {
+    height: 66px;
 }
 
 #intro {
@@ -337,58 +443,107 @@ ul.horizontal > li {
     }
 }
 @media screen and (max-width: 960px) {
+    .content > .col1-of-1 {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
     .content > .col1-of-2 {
         display: block;
-        width: auto;
+        margin-right: 10px;
+        text-align: center;
+        width: 100%;
     }
     .content > .col2-of-2 {
         display: block;
+        margin-left: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    .content .card {
+        display: inline-block;
+        min-width: 430px;
+        text-align: left;
+        width: 430px;
+    }
+    .content.gallery .card {
+        display: block;
         width: auto;
+    }
+    .content.music {
+        text-align: center;
+    }
+    .content.music h1 {
+        text-align: left;
     }
 }
 
     </style>
 </head>
-<body>
+<body id="top">
     <div id="header">
         <div class="content">
-            <a href="#" class="logo">F&B</a>
+            <a href="#top" class="logo">F&B</a>
             <!--
             <div class="search visible">
                 <input type="text" placeholder="Durchsuchen ...">
             </div>
             -->
             <ul class="no-style horizontal">
-                <li><a href="#social">Social</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#band">Band</a></li>
                 <li><a href="#music">Music</a></li>
-                <li><a href="#news">Band</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </div>
     </div>
     <div id="intro">
         <img class="logo" src="img/intro-logo.png" alt="Flesh`n`Blood - Metallic Punk`n Roll">    
     </div>
-    <div id="main">
+    <div id="main"> 
+        
         <div class="content seam1">
-            <h1>Social</h1>
+            <h1 id="news">News</h1>
             
-            <div class="col1-of-2 social-fb">
+            <div class="col1-of-1">
+                <div class="card">
+                    <h2>On the Road</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>29.04.2016</td>
+                                <td><a target="_blank" href="http://www.emergenza.net/DE/de-de/gig/739/16430/29-april-2016.aspx">Emergenza 2016 Semifinale</a></td>
+                                <td><a target="_blank" href="http://www.werk-2.de/programm/2016-04-29_emergenza_semifinals_leipzig">Werk II, Halle D - Leipzig</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="col1-of-2">
                 
                 <div class="card">
-                <!--
-                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FFlesh-n-Blood%2F181851281884975&amp;width=400&amp;colorscheme=dark&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;height=395" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:395px;" allowTransparency="true"></iframe>
-                -->
+                    <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FFlesh-n-Blood%2F181851281884975&amp;width=400&amp;colorscheme=dark&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;height=395" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:410px; height:395px;" allowTransparency="true"></iframe>
                 </div>
+                
             </div>
             <div class="col2-of-2 social-networks">
                 <div class="card">
-                    <h2>Contacting Flesh`n`Blood:</h2>
+                    <h2>Contacting Flesh`n`Blood</h2>
                     <ul>
-                        <li><a href="http%3A%2F%2Fwww.facebook.com%2Fpages%2FFlesh-n-Blood%2F181851281884975">Facebook</a></li>
+                        <li><a href="http://www.facebook.com/pages/Flesh-n-Blood/181851281884975">FnB [&alpha;&tau;] Facebook</a></li>
                         <li><a>fleshnblood [&alpha;&tau;] freenet &middot; de</a></li>
+                        <li><a href="http://www.disclaimer.de/disclaimer.htm?farbe=FFFFFF/000000/000000/000000">Haftungsausschluss</a></li>
                     </ul>
                     
-                    <h2>visit Flesh`n`Blood on:</h2>
+                    <h2>visit Flesh`n`Blood on</h2>
                     <ul class="no-style">
                         <li>
                             <a class="bandcamp" target="_blank" href="https://fleshnbloodmusik.bandcamp.com/">
@@ -405,71 +560,87 @@ ul.horizontal > li {
             </div>
         </div>
         
-        <div class="content seam2">
-            <h1>News</h1>
+        <div class="content seam2 band">
+            <h1 id="band">Band</h1>
             
             <div class="col1-of-2">
                 <div class="card">
-                    <h2>On the Road:</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Wann?</th>
-                                <th>Was?</th>
-                                <th>Wo?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01.01.2016</td>
-                                <td>Test</td>
-                                <td>Leipzig</td>
-                            </tr>
-                            <tr>
-                                <td>02.01.2016</td>
-                                <td>Test2</td>
-                                <td>Merseburg</td>
-                            </tr>
-                            <tr>
-                                <td>03.01.2016</td>
-                                <td>Test3</td>
-                                <td>Halle</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h2>Flesh`n`Blood</h2>
+                    <p>
+                        Nach nun mehr als 15 Jahren und einigen Besetzungswechseln 
+                        hat Flesh`n`Blood nun wieder ein festes Line-Up. Gegen alle 
+                        Konventionen werden hier verschiedene Musikstile miteinander 
+                        vereint, ein Mix aus Rock, Metal und gewürzt mit einer 
+                        ordentlichen Portion Punkrock.
+                    </p>
+                    <p>
+                        Fernab vom üblichen Schubladendenken werden persönliche 
+                        und kritische Themen angesprochen. Bisher hat die Band vier 
+                        Alben aufgenohmmen und diese in Eigenregie (D.I.Y.) 
+                        herausgebracht, zur Zeit wird fleißig am 6. Machwerk gearbeitet.
+                    </p>
+                    <p>
+                        Ansonsten erklimmen die Jungs gern und so oft wie möglich die Bühne.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>Tino</h2>
+                    <img src="img/tino_klein2.jpg">
+                </div>
+                <div class="card">
+                    <h2>Martin</h2>
+                    <img src="img/martin_klein.jpg">
                 </div>
             </div>
-            <div class="col2-of-2 social-networks">
+            
+            <div class="col2-of-2">
+                <div class="card fischi">
+                    <h2>Fischi</h2>
+                    <img src="img/fischi_klein.jpg">
+                </div>
                 <div class="card">
-                    <h2>Contact Flesh`n`Blood:</h2>
-                    <ul>
-                        <li><a href="http%3A%2F%2Fwww.facebook.com%2Fpages%2FFlesh-n-Blood%2F181851281884975">Facebook</a></li>
-                        <li><a>fleshnblood [&alpha;&tau;] freenet &middot; de</a></li>
-                    </ul>
-                    
-                    <h2>visit Flesh`n`Blood on:</h2>
-                    <ul class="no-style">
-                        <li>
-                            <a class="bandcamp" target="_blank" href="https://fleshnbloodmusik.bandcamp.com/">
-                                <img src="img/bandcamp.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="lastfm" target="_blank" href="http://www.last.fm/de/music/Flesh+%60n%60+Blood">
-                                <img src="img/lastfm.png">
-                            </a>
-                        </li>
-                    </ul>
+                    <h2>Jens</h2>
+                    <img src="img/jens_klein2.jpg">
+                </div>
+                <div class="card">
+                    <h2>Siggi</h2>
+                    <img src="img/siggi_klein2.jpg">
                 </div>
             </div>
         </div>
 
-        <div class="content seam2">
-            <h1>News</h1>
+        <div class="content seam3 music">
+            <h1 id="music">Music</h1>
+            
+            <div class="card">
+                <h2>Kreislauf des Feuers (2013)</h2>
+                <iframe style="border: 0; width: 400px; height: 737px;" src="http://bandcamp.com/EmbeddedPlayer/album=3631780024/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://fleshnbloodmusik.bandcamp.com/album/kreislauf-des-feuers">Kreislauf des Feuers by Flesh `N` Blood</a></iframe>
+            </div>
+            
+            <div class="card">
+                <h2>Stillstand (2008)</h2>
+                <iframe style="border: 0; width: 400px; height: 836px;" src="http://bandcamp.com/EmbeddedPlayer/album=461003877/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://fleshnbloodmusik.bandcamp.com/album/stillstand">Stillstand by Flesh `N` Blood</a></iframe>
+            </div>
+        
+            <div class="card">
+                <h2>Winners & Losers (2004)</h2>
+                <iframe style="border: 0; width: 400px; height: 836px;" src="http://bandcamp.com/EmbeddedPlayer/album=2698671379/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://fleshnbloodmusik.bandcamp.com/album/winners-losers">Winners &amp; Losers by Flesh `N` Blood</a></iframe>
+            </div>
+            
+            <div class="card">
+                <h2>Adverso Flumine (2003)</h2>
+                <iframe style="border: 0; width: 400px; height: 836px;" src="https://bandcamp.com/EmbeddedPlayer/album=631952530/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://fleshnbloodmusik.bandcamp.com/album/adverso-flumine">adverso flumine by Flesh `N` Blood</a></iframe>
+            </div>
+            
+        </div>
+
+        <div class="content seam5 gallery">
+            <h1 id="gallery">Gallery</h1>
             
             <div class="col1-of-1">
+                
                 <div class="card">
-                    <h2>On the Road:</h2>
+                    <h2>2011</h2>
                     <table>
                         <thead>
                             <tr>
@@ -479,27 +650,326 @@ ul.horizontal > li {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr class='cancelled-date'><td>23.09.2011</td><td>Wei&szlig;enfels</td><td>in der <a href="http://www.trofa.de/" title="Trofa">Trofa</a> (Die Trofa wird leider geschlossen)</td></tr>
+                            <tr><td>12.06.2011</td><td>Merseburg</td><td>Akustisch in der Christianenstraße</td></tr>
+                            <tr><td>14.05.2011</td><td>Merseburg</td><td>Mampfe</td></tr>
+                        </tbody>
+                    </table>
+                </div> 
+                
+                <div class="card">
+                    <h2>2010</h2>
+                    <table>
+                        <thead>
                             <tr>
-                                <td>01.01.2016</td>
-                                <td>Test</td>
-                                <td>Leipzig</td>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
                             </tr>
-                            <tr>
-                                <td>02.01.2016</td>
-                                <td>Test2</td>
-                                <td>Merseburg</td>
-                            </tr>
-                            <tr>
-                                <td>03.01.2016</td>
-                                <td>Test3</td>
-                                <td>Halle</td>
-                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class='cancelled-date'><td>27.12.2010</td><td>Bitterfeld</td><td> im <a href='http://www.myspace.com/akw_bitterfeld' target='_blank'>AKW</a> (Wetterbedingt ausgefallen)</td><tr>
+                            <tr><td>22.10.2010</td><td>Leipzig</td><td><a href='http://www.myspace.com/orgasmatronszene' target='_blank'>Orgasmotron</a></td></tr>
+                            <tr><td>12.06.2010</td><td>Naumburg</td><td>Skatepark (Unwetterbedingt im Tank)</td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20100612_nmbg/bild1.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild2.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild3.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild4.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild5.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild6.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild7.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild8.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20100612_nmbg/bild9.jpg" rel='lightbox[20100612_nmbg]' title='12. Juni 2010, Naumburg im Tank statt auf dem Skatepark'><img src="img/gallery/20100612_nmbg/thumbs/bild9.jpg"></a></li>
+                                    
+                                </ul>
+                            </td></tr>
+                            <tr><td>20.03.2010</td><td>Berlin</td><td><a href='http://www.livegigs.de/locations/berlin/schnarup-thumby.22379.html' target='_blank'>Schnarup Thumby</a></td></tr>
                         </tbody>
                     </table>
                 </div>
+                
+                <div class="card">
+                    <h2>2009</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>17.12.2009</td><td>Merseburg</td><td><a href='http://www.waermi.de/' target='_blank'>W&auml;rmi</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20091217_msbg/bild1.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild2.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild3.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild4.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild5.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild6.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild7.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild8.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild9.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild10.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild11.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild12.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild12.jpg"></a></li>
+                                    <li><a href="img/gallery/20091217_msbg/bild13.jpg" rel='lightbox[20091217_msbg]' title='17. Dezember 2009, Merseburg - Halbakustik-Set im W&auml;rmi'><img src="img/gallery/20091217_msbg/thumbs/bild13.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                            <tr><td>15.12.2009</td><td>Halle</td><td><a href='http://www.rockstation-halle.com/' target='_blank'>Rockstation</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20091215_halle/bild1.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild2.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild3.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild4.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild5.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild6.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild7.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild8.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild9.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild10.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild11.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/20091215_halle/bild12.jpg" rel='lightbox[20091215_halle]' title='15. Dezember 2009, Halle - Support beim Animal Boys Geburtstag'><img src="img/gallery/20091215_halle/thumbs/bild12.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                            <tr><td>21.11.2009</td><td>Halle</td><td><a href='http://www.ludwigstrasse37.de/' target='_blank'>VL</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2008</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09.11.2008</td><td>Halle</td><td><a href='http://www.reil78.de' target='_blank'>Reil78</a></td></tr>
+                            <tr><td>07.11.2008</td><td>Halle</td><td><a href='http://www.ludwigstrasse37.de/' target='_blank'>VL</a></td></tr>
+                            <tr><td>17.10.2008</td><td>Halle</td><td><a href='http://www.reil78.de' target='_blank'>Reil78</a></td></tr>
+                            <tr><td>01.08.2008</td><td>Weimar</td><td>Antifa Workcamp</td></tr>
+                            <tr><td>26.07.2008</td><td>Wei&szlig;enfels</td><td><a href='http://www.lastfm.de/venue/8915019' target='_blank'>Schlo&szlig;hof</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20080726_wsf/bild1.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild2.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild3.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild4.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild4.jpg"></a></li>
+                                    <!--li><a href="img/gallery/20080726_wsf/bild5.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild5.jpg"></a></li-->
+                                    <li><a href="img/gallery/20080726_wsf/bild6.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild7.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild8.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20080726_wsf/bild9.jpg" rel='lightbox[20080726_wsf]' title='26. Juli 2008, Wei&szlig;enfels'><img src="img/gallery/20080726_wsf/thumbs/bild9.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                            
+                            <tr class='cancelled-date'><td>19.07.2008</td><td>Leipzig</td><td>B12</td></tr>
+                            <tr><td>31.05.2008</td><td>Halle</td><td><a href='http://www.ludwigstrasse37.de/' target='_blank'>VL</a></td></tr>
+                            <tr class='cancelled-date'><td>19.04.2008</td><td>R&ouml;blingen am See</td><td></td></tr>
+                            <tr><td>12.04.2008</td><td>Berlin</td><td><a href='http://www.livegigs.de/locations/berlin/schnarup-thumby.22379.html' target='_blank'>Schnarup Thumby</a></td></tr>
+                            <tr><td>29.03.2008</td><td>Wolfen</td><td><a href='http://www.roxy-wolfen.de/' target='_blank'>Roxy</a></td></tr>
+                            <tr><td>01.03.2008</td><td>Karsdorf</td><td></td></tr>
+                            <tr><td>23.02.2008</td><td>Naumburg</td><td><a href='http://www.stadtbegleiter.com/naumburg/Gastronomie/marienkeller/kontakt.htm' target='_blank'>Marienkeller</a></td></tr>
+                            <tr><td>02.02.2008</td><td>Naumburg</td><td>Tank</td></tr>
+                            <tr><td>26.01.2008</td><td>Berlin</td><td><a href='http://www.cafe-morgenrot.de/' target='_blank'>Cafe Morgenrot</a></td></tr>
+                            <tr><td>19.01.2008</td><td>Merseburg</td><td><a href='http://www.fh-merseburg.de/~wecker/' target='_blank'>SC zum fr&ouml;hlichen Wecker</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2007</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>30.11.2007</td><td>Merseburg</td><td><a href='http://www.fh-merseburg.de/~wecker/' target='_blank'>SC zum fr&ouml;hlichen Wecker</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20071130_msbg/bild1.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild2.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild3.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild4.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild5.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild6.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild7.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild8.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild9.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild10.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild11.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild12.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild12.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild13.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild13.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild14.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild14.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild15.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild15.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild16.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild16.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild17.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild17.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild18.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild18.jpg"></a></li>
+                                    <li><a href="img/gallery/20071130_msbg/bild19.jpg" rel='lightbox[20071130_msbg]' title='30.11.2007, Merseburg'><img src="img/gallery/20071130_msbg/thumbs/bild19.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                            <tr><td>17.07.2007</td><td>Wei&szlig;enfels</td><td>Open Air</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2006</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>05.12.2006?</td><td>Halle</td><td><a href='http://www.ludwigstrasse37.de/' target='_blank'>VL</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul>
+                                    <li><a href="img/gallery/mehr/bild1.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild2.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild3.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild4.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild5.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild6.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild7.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild8.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild9.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild10.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild11.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild12.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild12.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild13.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild13.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild14.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild14.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild15.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild15.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild16.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild16.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild17.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild17.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild18.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild18.jpg"></a></li>
+                                    <li><a href="img/gallery/mehr/bild19.jpg" rel='lightbox[20061205]' title='05. Dezember 2006?, Halle'><img src="img/gallery/mehr/thumbs/bild19.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                            <tr><td>15.07.2006</td><td>Wei&szlig;enfels<td>Open Air</td></tr>
+                            <tr><td colspan='3'>
+                                <ul >
+                                    <li><a href="img/gallery/20060715_wsf/bild1.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild2.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild3.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild4.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild5.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild6.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild7.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild8.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild9.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild10.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild11.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild12.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild12.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild13.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild13.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild14.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild14.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild15.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild15.jpg"></a></li>
+                                    <li><a href="img/gallery/20060715_wsf/bild16.jpg" rel='lightbox[20060715_wsf]' title='15. Juli 2006, Wei&szlig;enfels'><img src="img/gallery/20060715_wsf/thumbs/bild16.jpg"></a></li>
+                                </ul>
+                            </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2005</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>03.12.2005</td><td>Halle</td><td>Choise Is Noiz Festival</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2004</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>01.05.2004</td><td>Merseburg</td><td>1. Mai Demo</td></tr>
+                            <tr><td colspan='3'>
+                                <ul>
+                                    <li><a href='img/gallery/20040501_msbg/bild1.jpg' rel='lightbox[20040501_msbg]' title='1. Mai 2004, Merseburg'><img src='img/gallery/20040501_msbg/thumbs/bild1.jpg' height='73'></a></li>
+                                    <li><a href='img/gallery/20040501_msbg/bild2.jpg' rel='lightbox[20040501_msbg]' title='1. Mai 2004, Merseburg'><img src='img/gallery/20040501_msbg/thumbs/bild2.jpg' height='73'></a></li>
+                                    <li><a href='img/gallery/20040501_msbg/bild3.jpg' rel='lightbox[20040501_msbg]' title='1. Mai 2004, Merseburg'><img src='img/gallery/20040501_msbg/thumbs/bild3.jpg' height='73'></a></li>
+                                    <li><a href='img/gallery/20040501_msbg/bild4.jpg' rel='lightbox[20040501_msbg]' title='1. Mai 2004, Merseburg'><img src='img/gallery/20040501_msbg/thumbs/bild4.jpg' height='73'></a></li>
+                                </ul>
+                            </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h2>2003</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wann?</th>
+                                <th>Was?</th>
+                                <th>Wo?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09.08.2003</td><td>Merseburg</td><td><a href='http://www.fh-merseburg.de/~wecker/' target='_blank'>SC zum fr&ouml;hlichen Wecker</a></td></tr>
+			<tr><td>25.07.2003</td><td>Naumburg</td><td>Tank</td></tr>
+                            <tr><td>Unbekannt</td><td>Halle</td><td><a href='http://www.ludwigstrasse37.de/' target='_blank'>VL</a></td></tr>
+                            <tr><td colspan='3'>
+                                <ul>
+                                    <li><a href="img/gallery/vl_halle/bild1.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild1.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild2.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild2.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild3.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild3.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild4.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild4.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild5.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild5.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild6.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild6.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild7.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild7.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild8.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild8.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild9.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild9.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild10.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild10.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild11.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild11.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild12.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild12.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild13.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild13.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild14.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild14.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild15.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild15.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild16.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild16.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild17.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild17.jpg"></a></li>
+                                    <li><a href="img/gallery/vl_halle/bild18.jpg" rel='lightbox[vl-halle]' title='???, Halle'><img src="img/gallery/vl_halle/thumbs/bild18.jpg"></a></li>
+                                    
+                                </ul>
+                            </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
+            
         </div>
-
+        
     </div>
     <script>
         
@@ -585,6 +1055,68 @@ ul.horizontal > li {
     
     on(window, 'scroll', onScroll);
     onScroll();
+    
+    function sliceNodelist(list) {
+        var result = [];
+        for (var i = 0; i < list.length; i += 1) {
+            result.push(list[i]);
+        }
+        return result;
+    }
+    
+    // From http://stackoverflow.com/questions/17733076/smooth-scroll-anchor-links-without-jquery
+    function scrollTo(element, to, duration, next) {
+        if (duration < 0) {
+            next();
+            return;
+        }
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
+
+        setTimeout(function() {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop === to) {
+                next();
+                return;
+            }
+            scrollTo(element, to, duration - 10, next);
+        }, 10);
+    }
+    
+    var navLinks = sliceNodelist(document.querySelectorAll('#header a'));
+    navLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+            var anchor = document.querySelector(href);
+            
+            on(link, 'click', function (ev) {
+                ev.preventDefault();
+                ev.stopPropagation();
+                
+                //var top = ;
+                //console.log(anchor.href, window.pageYOffset + top);
+                
+                scrollTo(
+                    document.body, 
+                    window.pageYOffset + anchor.getBoundingClientRect().top, 
+                    600,
+                    function () {
+                        window.location.hash = href;
+                        
+                        //navLinks.forEach(function (nav) {
+                        //    removeClass(nav, 'active');
+                        //});
+                        
+                        //var el = document.querySelector('a[href="' + href + '"]');
+                        
+                        //if (el) {
+                        //    addClass(el, 'active');
+                        //}
+                    });
+            })
+            
+        });
+    
+    
     
     /*function onResize() {
         //console.log('onResize', arguments);

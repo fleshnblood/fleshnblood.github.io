@@ -18,7 +18,7 @@ var config = {
         quoteCharacter: '"',
     },
     sourceFile: 'index-dev.html',
-    targetFile: 'index-prod.html',
+    targetFile: 'index.html',
 };
 
 console.log('Minifying ' + config.sourceFile + ' -> ' + config.targetFile);
